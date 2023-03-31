@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./video.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://kit.fontawesome.com/4ca4a26284.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<section>
+        <div class="contain">
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+
+                    <div class="swiper-slide">
+
+                        <video playsinline autoplay muted loop>
+                            <source src="./Sneakers walking through a forest.mp4" type="video/mp4" id="videoSlide">
+                        </video>
+                        <div class="swiper-text">
+                            <div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente distinctio minus
+                                doloremque, aperiam molestiae eligendi magnam ipsam, mollitia, libero dolores vel
+                                voluptas itaque? Omnis officia aut alias voluptatum iusto enim.
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="swiper-slide">
+                        <video playsinline autoplay muted loop>
+                            <source src="./Dancer wearing Flamenco shoes.mp4" type="video/mp4" id="videoSlide">
+                        </video>
+
+                        <div class="swiper-text">
+                            <div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente distinctio minus
+                                doloremque, aperiam molestiae eligendi magnam ipsam, mollitia, libero dolores vel
+                                voluptas itaque? Omnis officia aut alias voluptatum iusto enim.
+                            </div>
+                        </div>
+
+                    </div>
+
+                    ...
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+
+
+
+
+
+        </div>
+
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        // next.addEventListener("click", sliding);
+        const swiper = new Swiper('.swiper', {
+            autoplay: {
+                delay: 10000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+        });
+
+    </script>
+
+
+
+</body>
+<script src="home.js"></script>
+
+</html>

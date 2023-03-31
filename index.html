@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Footwear</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <script src="https://kit.fontawesome.com/4ca4a26284.js" crossorigin="anonymous"></script>
+
+
+
+
+</head>
+
+<body>
+    <nav>
+        <div class="navItems">
+            <div class="logo">
+
+                <h3><img src="" alt="">ShoeShine</h3>
+            </div>
+            <div class="navLinks">
+                <ul>
+                    <!-- <i class="fas fa-xmark"></i> -->
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown"><a href="">Collections</a>
+                        <div class="dropdown-content">
+                            <a href="All product.html">All products</a>
+                            <a href="index.html #thirdSection">New trends</a>
+                            <a href="Menwears.html">Men wears</a>
+                            <a href="Womenwears.html">Women wears</a>
+                        </div>
+
+
+                    </li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
+
+                </ul>
+            </div>
+            <i class="fas fa-bars-staggered" id="menuOpen"></i>
+            <i class="fas fa-circle-xmark" id="menuClose"></i>
+            <!-- <i class="fas fa-bars"></i> -->
+            <div class="navButton">
+                <li><i class="fas fa-cart-shopping"></i> Cart<sup><input value="0" disabled></sup>
+
+                </li>
+                <a href="" target="_blank">
+
+                    <button type="button" id="orderButton" onclick="toggle()"> Make Request
+
+                    </button>
+
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="cartSection">
+        <div class="innerCartSection">
+
+            <i class="fas fa-left-long"></i>
+            <div class="addedCart">
+                <!-- <div class="imgQuantity">
+
+
+
+                    <div>
+                        <img class="imageProduct" src=" " alt="" width="100px" height="100px">
+
+
+                    </div>
+                    <div class="cartIcons">
+                        <i class="fas fa-circle-plus" id="increase" onclick="increase(this)"></i>
+
+                        <input placeholder=" " value="1" id="quantitySpace">
+
+                        <i class="fas fa-minus" onclick="decrease(this)" id="minus"></i>
+
+                        <i class="fas fa-circle-xmark" id="removeCart"></i>
+                    </div>
+                </div>
+                <div class="prodName">
+
+
+                    <p class="nameProduct">Hand-Made Italian</p>
+                    <p class="namePrice">₦<span data-price="45">45</span></p>
+
+                </div> -->
+
+
+            </div>
+            <!-- <div class="addedCart">
+                <div class="imgQuantity">
+
+               
+               
+                    <div>
+                        <img src="./currentImages/pngegg (12).png" alt="" width="100px" height="100px">
+    
+    
+                    </div>
+                    <div class="cartIcons">
+                        <i class="fas fa-circle-plus" id="increase"></i>
+                        <input placeholder=" " value="1" id="quantitySpace">
+                        <i class="fas fa-minus" id="minus"></i>
+                        <i class="fas fa-circle-xmark" id="removeCart"></i>
+                    </div>
+                </div>
+                <div class="prodName">
+
+
+                    <p class="nameProduct">Hand-Made Italian</p>
+                    <p class="namePrice" >₦<span data-price = "80">80 </span></p>
+
+                </div>
+                
+               
+            </div> -->
+            <!--
+            <div class="addedCart">
+                <div class="imgQuantity">
+
+               
+               
+                    <div>
+                        <img src="./currentImages/pngegg (12).png" alt="" width="100px" height="100px">
+    
+    
+                    </div>
+                    <div class="cartIcons">
+                        <i class="fas fa-circle-plus" id="increase"></i>
+                        <input placeholder=" " value="1" id="quantitySpace">
+                        <i class="fas fa-minus" id="minus"></i>
+                        <i class="fas fa-circle-xmark" id="removeCart"></i>
+                    </div>
+                </div>
+                <div class="prodName">
+
+
+                    <p class="nameProduct">Hand-Made Italian</p>
+                    <p class="namePrice" >₦<span data-price = "80">80.00 </span></p>
+
+                </div>
+                
+               
+            </div>
+            <div class="addedCart">
+                <div class="imgQuantity">
+
+               
+               
+                    <div>
+                        <img src="./currentImages/pngegg (12).png" alt="" width="100px" height="100px">
+    
+    
+                    </div>
+                    <div class="cartIcons">
+                        <i class="fas fa-circle-plus" id="increase"></i>
+                        <input placeholder=" " value="1" id="quantitySpace">
+                        <i class="fas fa-minus" id="minus"></i>
+                        <i class="fas fa-circle-xmark" id="removeCart"></i>
+                    </div>
+                </div>
+                <div class="prodName">
+
+
+                    <p class="nameProduct">Hand-Made Italian</p>
+                    <p class="namePrice" >₦<span data-price = "43.25">43.25 </span></p>
+
+                </div>
+                
+               
+            </div>
+            <div class="addedCart">
+                <div class="imgQuantity">
+
+               
+               
+                    <div>
+                        <img src="./currentImages/pngegg (12).png" alt="" width="100px" height="100px">
+    
+    
+                    </div>
+                    <div class="cartIcons">
+                        <i class="fas fa-circle-plus" id="increase"></i>
+                        <input placeholder=" " value="1" id="quantitySpace">
+                        <i class="fas fa-minus" id="minus"></i>
+                        <i class="fas fa-circle-xmark" id="removeCart"></i>
+                    </div>
+                </div>
+                <div class="prodName">
+
+
+                    <p class="nameProduct">Hand-Made Italian</p>
+                    <p class="namePrice" >₦<span data-price = "75.50">75.50 </span></p>
+
+                </div>
+                
+               
+            </div>
+            <div class="addedCart">
+                <div class="imgQuantity">
+
+               
+               
+                    <div>
+                        <img src="./currentImages/pngegg (12).png" alt="" width="100px" height="100px">
+    
+    
+                    </div>
+                    <div class="cartIcons">
+                        <i class="fas fa-circle-plus" id="increase"></i>
+                        <input placeholder=" " value="1" id="quantitySpace">
+                        <i class="fas fa-minus" id="minus"></i>
+                        <i class="fas fa-circle-xmark" id="removeCart"></i>
+                    </div>
+                </div>
+                <div class="prodName">
+
+
+                    <p class="nameProduct">Hand-Made Italian</p>
+                    <p class="namePrice" >₦<span data-price = "90.50">90.50 </span></p>
+
+                </div>
+                
+               
+            </div>
+            <div class="addedCart">
+                <div class="imgQuantity">
+
+               
+               
+                    <div>
+                        <img src="./currentImages/pngegg (12).png" alt="" width="100px" height="100px">
+    
+    
+                    </div>
+                    <div class="cartIcons">
+                        <i class="fas fa-circle-plus" id="increase"></i>
+                        <input placeholder=" " value="1" id="quantitySpace">
+                        <i class="fas fa-minus" id="minus"></i>
+                        <i class="fas fa-circle-xmark" id="removeCart"></i>
+                    </div>
+                </div>
+                <div class="prodName">
+
+
+                    <p class="nameProduct">Hand-Made Italian</p>
+                    <p class="namePrice" >₦<span data-price = "80.50">80.50 </span></p>
+
+                </div>
+                
+               
+            </div> -->
+        </div>
+        <div class="totalCart">
+            <button type="button" id="check">CheckOut
+                <span id="realCheck"></span>
+            </button>
+        </div>
+
+    </div>
+
+    <section id="firstSection">
+        <div class="main">
+            <div class="main1">
+                <div class="innerMain">
+                    <h3>Get the Best Footwears: men styles ,women styles,sports...
+                    </h3>
+                </div>
+
+                <div class="innerMain2">
+                    <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque in, tenetur sint voluptate velit
+                        harum accusamus, ipsam commodi asperiores ipsum voluptates Lorem ipsum dolor sit amet,
+                        consectetur
+                    </h4>
+                </div>
+                <!-- <div class="socialMain">
+                    <img src="./face.png" alt="" width="80px" height="60px">
+                    <img src="./twit.png" alt="" width="80px" height="60px">
+                    <img src="./whats.png" alt="" width="80px" height="60px">
+                    <img src="./inst.png" alt="" width="80px" height="60px">
+                     <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter-square"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-whatsapp"></i> 
+
+                </div> -->
+                <div class="main1button">
+
+                    <button type="button" class="btn">Shop Now</button>
+                </div>
+
+            </div>
+            <div class="main2">
+
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide"><img src="./currentImages/pngegg (1).png" alt="">
+                            <div class="videoOverlay">
+                                <div class="videoOverlayText">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores adipisci quos dicta
+                                    quam sed repudiandae officiis debitis facere quidem aliquam, nemo consequuntur
+                                    distinctio similique? Omnis eaque odit iusto minus eligendi!
+                                </div>
+
+                            </div>
+
+
+
+
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./currentImages/pngegg (11).png" alt="">
+
+                            <div class="videoOverlay">
+                                <div class="videoOverlayText">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores adipisci quos dicta
+                                    quam sed repudiandae officiis debitis facere quidem aliquam, nemo consequuntur
+                                    distinctio similique? Omnis eaque odit iusto minus eligendi!
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./currentImages/pngegg (2).png" alt="">
+
+
+
+                            <div class="videoOverlay">
+                                <div class="videoOverlayText">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores adipisci quos dicta
+                                    quam sed repudiandae officiis debitis facere quidem aliquam, nemo consequuntur
+                                    distinctio similique? Omnis eaque odit iusto minus eligendi!
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <!-- <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div> -->
+
+                    <!-- If we need scrollbar -->
+                    <!-- <div class="swiper-scrollbar"></div> -->
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- <video src="./Dancer wearing Flamenco shoes.mp4" type="video/mp4" playsinline autoplay muted loop> -->
+
+                <!-- 
+          
+           -->
+                </video>
+            </div>
+
+        </div>
+
+        <div class="cartSuccess">
+            <div>
+                <i class="fas fa-check-double"></i>
+
+            </div>
+            <div>
+                Product has been added Successfully
+            </div>
+            <div>
+                <i class="fas fa-circle-xmark"></i>
+            </div>
+        </div>
+    </section>
+    <section id="secondSection">
+        <div class="banner">
+            <div class="slider">
+                <img src="./currentImages/pngegg (11).png" alt="" id="slides">
+            </div>
+            <div class="overlay">
+
+
+                <div class="content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita totam iusto a fuga itaque labore
+                    ea quia aspernatur voluptate
+                </div>
+
+            </div>
+        </div>
+
+        <div class="notSlider">
+            <div>
+                <div class="shopImage">
+
+                    <img src="./hank-shake-continue-today-main-200403.jpg" alt="" width="100%" height="250px">
+                </div>
+                <div class="layShop">
+                    <div class="words">
+                        <button type="button" id="layButton">Shop Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="notSliderLast">
+                <div class="trend">
+                    <img src="./shoeshop.jpg" alt="" width="800px" height="214px">
+                </div>
+                <div class="trendOverlay">
+                    <div class="trending">
+                        <button type="button" id="trendButton">Trending</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <marquee behavior="high" direction="right">
+        <p>kdfbdkfbh</p>
+        <p>kjnkdfnkjn</p>
+    </marquee>
+    <section id="thirdSection">
+        <div>
+
+            <h1>Trending </h1>
+        </div>
+        <div class="products">
+            <div>
+                <p>
+
+                    <img class="imageProduct" src="./currentImages/pngegg (1).png" alt="" width="200px" height="200px">
+
+                </p>
+                <div>
+
+
+                    <p class="nameProduct">Hand Made Italian red</p>
+                    <p class="namePrice"><span>556</span></p>
+                    <p>Color</p>
+                    <p><label for=""> <i class="fas fa-circle  red"></i> Red</label>
+
+                        <label for=""> <i class="fas fa-circle  blue"></i> blue</label>
+
+                        <label for=""> <i class="fas fa-circle  green"></i> green</label>
+
+                    </p>
+                    <p>
+                        <button type="button" class="btn" data-price="₦30000" data-name="Hand Made Italian Shoe"
+                            data-img="/pngegg (1).png">Buy</button>
+
+                        <button type="button" class="cart">Add to
+                            Cart</button>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <p>
+
+                    <img class="imageProduct" src="./currentImages/pngegg (8).png" alt="" width="200px" height="200px">
+
+                </p>
+                <div>
+
+
+                    <p>Hand Made Italian Shoe</p>
+                    <!-- <p>₦40,000</p> -->
+                    <p class="namePrice">₦ <span>
+                            4444
+                        </span></p>
+                    <p>Color</p>
+                    <p><label for=""> <i class="fas fa-circle  red"></i> Red</label>
+
+                        <label for=""> <i class="fas fa-circle  blue"></i> blue</label>
+
+                        <label for=""> <i class="fas fa-circle  green"></i> green</label>
+
+                    </p>
+                    <p>
+                        <button type="button" class="btn" data-price="₦40000" data-name="Hand Made Italian Shoe"
+                            data-img="./pngegg (8).png">Buy</button>
+                        <button type="button" class="cart">Add to
+                            Cart</button>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <p>
+
+                    <img src="./currentImages/pngegg (5).png" alt="" width="200px" height="200px">
+
+                </p>
+                <div>
+
+
+                    <p>Hand Made Italian Shoe</p>
+                    <p>₦50,000</p>
+                    <p>Color</p>
+                    <p><label for=""> <i class="fas fa-circle  red"></i> Red</label>
+
+                        <label for=""> <i class="fas fa-circle  blue"></i> blue</label>
+
+                        <label for=""> <i class="fas fa-circle  green"></i> green</label>
+
+                    </p>
+                    <p>
+                        <button type="button" class="btn" data-price="₦50000" data-name="Hand Made Italian Shoe"
+                            data-img="./pngegg (5).png">Buy</button>
+                        <button type="button" class="cart">Add to
+                            Cart</button>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <p>
+
+                    <img src="./currentImages/pngegg (6).png" alt="" width="200px" height="200px">
+
+                </p>
+                <div>
+
+
+                    <p>Hand Made Italian Shoe</p>
+                    <p>₦60,000</p>
+                    <p>Color</p>
+                    <p><label for=""> <i class="fas fa-circle  red"></i> Red</label>
+
+                        <label for=""> <i class="fas fa-circle  blue"></i> blue</label>
+
+                        <label for=""> <i class="fas fa-circle  green"></i> green</label>
+
+                    </p>
+                    <p><button type="button" class="btn" data-price="₦60000" data-name="Hand Made Italian Shoe"
+                            data-img="./pngegg (6).png">Buy</button>
+                        <button type="button" class="cart">Add to
+                            Cart
+                        </button>
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <p>
+
+                    <img src="./currentImages/pngegg (5).png" alt="" width="200px" height="200px">
+
+                </p>
+                <div>
+
+
+                    <p>Hand Made Italian Shoe</p>
+                    <p>₦70,000</p>
+                    <p>Color</p>
+                    <p><label for=""> <i class="fas fa-circle  red"></i> Red</label>
+
+                        <label for=""> <i class="fas fa-circle  blue"></i> blue</label>
+
+                        <label for=""> <i class="fas fa-circle  green"></i> green</label>
+
+                    </p>
+                    <p><button type="button" class="btn" data-price="₦70000" data-name="Hand Made Italian Shoe"
+                            data-img="./currentImages/pngegg (5).png">Buy</button>
+                        <button type="button" class="cart">Add
+                            to Cart
+                        </button>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <p>
+
+                    <img src="./currentImages/pngegg (2).png" alt="" width="200px" height="200px">
+
+                </p>
+                <div>
+
+
+                    <p>Hand Made Italian Shoe</p>
+                    <p>₦80,000</p>
+                    <p>Color</p>
+                    <p><label for=""> <i class="fas fa-circle  red"></i> Red</label>
+
+                        <label for=""> <i class="fas fa-circle  blue"></i> blue</label>
+
+
+                        <label for=""> <i class="fas fa-circle  green"></i> green</label>
+
+                    </p>
+                    <p>
+                        <button type="button" class="btn" data-price="₦80000" data-name="Hand Made Italian Shoe"
+                            data-img="./currentImages/pngegg (2).png">Buy</button>
+                        <button type="button" class="cart">Add
+                            to Cart
+                        </button>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <p>
+
+                    <img src="./currentImages/pngegg.png" alt="" width="200px" height="200px">
+
+                </p>
+                <div>
+
+
+                    <p>Hand Made Italian Shoe</p>
+                    <p>₦90,000</p>
+                    <p>Color</p>
+                    <p><label for=""> <i class="fas fa-circle  red"></i> Red</label>
+
+                        <label for=""> <i class="fas fa-circle  blue"></i> blue</label>
+
+                        <label for=""> <i class="fas fa-circle  green"></i> green</label>
+
+                    </p>
+                    <p>
+                        <button type="button" class="btn" data-price="₦90000" data-name="Hand Made Italian Shoe"
+                            data-img="./currentImages/pngegg.png">Buy</button>
+                        <button type="button" class="cart">Add to
+                            Cart
+                        </button>
+                    </p>
+                </div>
+
+            </div>
+            <div>
+                <p>
+
+                    <img src="./currentImages/pngegg (12).png" alt="" width="200px" height="200px">
+
+                </p>
+                <div>
+
+
+                    <!-- <s> -->
+                    <p>Hand Made Italian Shoe</p>
+                    <!-- </s> -->
+                    <p>₦100,000</p>
+                    <p>Color</p>
+                    <p><label for=""> <i class="fas fa-circle  red"></i> Red</label>
+
+                        <label for=""> <i class="fas fa-circle  blue"></i> blue</label>
+
+                        <label for=""> <i class="fas fa-circle  green"></i> green</label>
+
+                    </p>
+                    <p>
+
+
+                        <button type="button" class="btn" data-price="₦100000" data-name="Hand Made Italian Shoe"
+                            data-img="./currentImages/pngegg (12).png" data-color1="red"
+                            data-fa-icon="fas fa-circle  green"></i>Buy</button>
+                        <button type="button" class="cart">Add to Cart</button>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="modalPopup">
+            <p><i class="fas fa-circle-xmark"></i></p>
+            <div class="desc">
+                <img src="./pngegg (2).png" alt="" class="imgSpace" width="100px" height="100px">
+                <p class="nameSpace"></p>
+                <p class="price"></p>
+                <label class="colorSpace1"></label>
+                <label class="colorSpace2"></label>
+                <label class="colorSpace3"></label>
+                <p></p>
+            </div>
+            <div class="contact2">
+                <form action="">
+                    <div>
+
+                        <p>
+                            <input placeholder=" " required>
+                            <label class="data1"><i class="fas fa-user"></i> First Name</label>
+
+                            <input placeholder=" " required>
+                            <label class="data2"><i class="fas fa-user"></i>Last Name</label>
+                        </p>
+                        <p>
+                            <input placeholder=" " required>
+                            <label class="data1"><i class="fas fa-envelope"></i>
+                                Email
+                            </label>
+
+                            <input placeholder=" " required>
+                            <label class="data2"><i class="fas fa-envelope"></i>
+                                Phone Number
+                            </label>
+                        </p>
+                        <p>
+                            <input placeholder=" " required>
+                            <label class="data1"><i class="fas fa-palette "></i>
+                                Color
+                            </label>
+
+                            <input placeholder=" " required>
+                            <label class="data2"><i class="fas fa-box-open"></i>
+                                Product Name
+                            </label>
+                        </p>
+
+                        <h2>Payment Method</h2>
+
+                        <div class="payment">
+
+                            <span>Transfer<input type="radio" id="check" name="on" value="transfer"></span>
+                            <span>Pay On Delivery<input type="radio" id="check" name="on" value="Delivery"></span>
+                            <span>Paystack<input type="radio" id="check" name="on" value="paystack"></span>
+                        </div>
+
+                        <p><button type="submit" id="confirm">Confirm</button></p>
+
+                    </div>
+                </form>
+
+
+            </div>
+
+        </div>
+    </section>
+    <section class="fourthSection">
+
+        <div>
+            <h1>Products on discount</h1>
+
+            <h4>Offer Valid till September 31st</h4>
+
+        </div>
+        <div class="count-down">
+            <div class="day-container">
+                <h3 class="day">Time</h3>
+
+                <h3>Day</h3>
+            </div>
+            <div class="hour-container">
+                <h3 class="hour">Time</h3>
+
+                <h3>Hour</h3>
+            </div>
+            <div class="minute-container">
+                <h3 class="minute">Time</h3>
+
+                <h3>Minute</h3>
+            </div>
+            <div class="second-container">
+                <h3 class="second">Time</h3>
+
+                <h3>Second</h3>
+            </div>
+        </div>
+        <div class="products">
+            <div>
+                <p>
+                    <span>-62%</span>
+                    <img src="./currentImages/pngegg (1).png" alt="" width="200px" height="200px">
+
+                </p>
+                <div>
+
+
+                    <p>Hand Made Italian Shoe</p>
+                    <p>₦30,000</p>
+                    <p>Color</p>
+                    <p><label for=""> <i class="fas fa-circle  red"></i> Red</label>
+
+                        <label for=""> <i class="fas fa-circle  blue"></i> blue</label>
+
+                        <label for=""> <i class="fas fa-circle  green"></i> green</label>
+
+                    </p>
+                    <p>
+                        <button type="button" class="btn" data-price="₦30000" data-name="Hand Made Italian Shoe"
+                            data-img="./pngegg (1).png">Buy</button>
+                        <button type="button" class="cart">Add to
+                            Cart
+                        </button>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <p>
+                    <span>-23%</span>
+
+                    <img src="./currentImages/pngegg (8).png" alt="" width="200px" height="200px">
+
+                </p>
+                <div>
+
+
+                    <p>Hand Made Italian Shoe</p>
+                    <p>₦40,000 <s>₦50,000</s></p>
+                    <p>Color</p>
+                    <p><label for=""> <i class="fas fa-circle  red"></i> Red</label>
+
+                        <label for=""> <i class="fas fa-circle  blue"></i> blue</label>
+
+                        <label for=""> <i class="fas fa-circle  green"></i> green</label>
+
+                    </p>
+                    <p>
+                        <button type="button" class="btn" data-price="₦40000" data-name="Hand Made Italian Shoe"
+                            data-img="./pngegg (8).png">Buy</button>
+                        <button type="button" class="cart">Add to
+                            Cart
+                        </button>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <p>
+                    <span>-33%</span>
+                    <img src="./currentImages/pngegg (5).png" alt="" width="200px" height="200px">
+
+                </p>
+                <div>
+
+
+                    <p>Hand Made Italian Shoe</p>
+                    <p>₦50,000</p>
+                    <p>Color</p>
+                    <p><label for=""> <i class="fas fa-circle  red"></i> Red</label>
+
+                        <label for=""> <i class="fas fa-circle  blue"></i> blue</label>
+
+                        <label for=""> <i class="fas fa-circle  green"></i> green</label>
+
+                    </p>
+                    <p>
+                        <button type="button" class="btn" data-price="₦50000" data-name="Hand Made Italian Shoe"
+                            data-img="./pngegg (5).png">Buy
+                        </button>
+                        <button type="button" class="cart">Add to
+                            Cart
+                        </button>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <p>
+                    <span>-48%</span>
+                    <img src="./currentImages/pngegg (6).png" alt="" width="200px" height="200px">
+
+                </p>
+                <div>
+
+
+                    <p>Hand Made Italian Shoe</p>
+                    <p>₦60,000</p>
+                    <p>Color</p>
+                    <p><label for=""> <i class="fas fa-circle  red"></i> Red</label>
+
+                        <label for=""> <i class="fas fa-circle  blue"></i> blue</label>
+
+                        <label for=""> <i class="fas fa-circle  green"></i> green</label>
+
+                    </p>
+                    <p>
+                        <button type="button" class="btn" data-price="₦60000" data-name="Hand Made Italian Shoe"
+                            data-img="./pngegg (6).png">Buy
+                        </button>
+                        <button type="button" class="cart">Add to
+                            Cart
+                        </button>
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <p>
+                    <span>-42%</span>
+                    <img src="./currentImages/pngegg (5).png" alt="" width="200px" height="200px">
+
+                </p>
+                <div>
+
+
+                    <p>Hand Made Italian Shoe</p>
+                    <p>₦70,000</p>
+                    <p>Color</p>
+                    <p><label for=""> <i class="fas fa-circle  red"></i> Red</label>
+
+                        <label for=""> <i class="fas fa-circle  blue"></i> blue</label>
+
+                        <label for=""> <i class="fas fa-circle  green"></i> green</label>
+
+                    </p>
+                    <p><button type="button" class="btn" data-price="₦70000" data-name="Hand Made Italian Shoe"
+                            data-img="./currentImages/pngegg (5).png">Buy</button>
+                        <button type="button" class="cart">Add to Cart</button>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <p>
+                    <span>-42%</span>
+                    <img src="./currentImages/pngegg (2).png" alt="" width="200px" height="200px">
+
+                </p>
+                <div>
+
+
+                    <p>Hand Made Italian Shoe</p>
+                    <p>₦80,000</p>
+                    <p>Color</p>
+                    <p><label for=""> <i class="fas fa-circle  red"></i> Red</label>
+
+                        <label for=""> <i class="fas fa-circle  blue"></i> blue</label>
+
+                        <label for=""> <i class="fas fa-circle  green"></i> green</label>
+
+                    </p>
+                    <p><button type="button" class="btn" data-price="₦80000" data-name="Hand Made Italian Shoe"
+                            data-img="./currentImages/pngegg (2).png">Buy</button>
+
+                        <button type="button" class="cart">Add to Cart</button>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <p>
+                    <span>-32%</span>
+                    <img src="./currentImages/pngegg.png" alt="" width="200px" height="200px">
+
+                </p>
+                <div>
+
+
+                    <p>Hand Made Italian Shoe</p>
+                    <p>₦90,000</p>
+                    <p>Color</p>
+                    <p><label for=""> <i class="fas fa-circle  red"></i> Red</label>
+
+                        <label for=""> <i class="fas fa-circle  blue"></i> blue</label>
+
+                        <label for=""> <i class="fas fa-circle  green"></i> green</label>
+
+                    </p>
+                    <p><button type="button" class="btn" data-price="₦90000" data-name="Hand Made Italian Shoe"
+                            data-img="./currentImages/pngegg.png">Buy</button>
+                        <button type="button" class="cart">Add to Cart</button>
+
+                    </p>
+                </div>
+
+            </div>
+            <div>
+                <p>
+                    <span>-45%</span>
+                    <img src="./currentImages/pngegg (12).png" alt="" width="200px" height="200px">
+
+                </p>
+                <div>
+
+
+                    <!-- <s> -->
+                    <p>Hand Made Italian Shoe</p>
+                    <!-- </s> -->
+                    <p>₦100,000</p>
+                    <p>Color</p>
+                    <p><label for=""> <i class="fas fa-circle  red"></i> Red</label>
+
+                        <label for=""> <i class="fas fa-circle  blue"></i> blue</label>
+
+                        <label for=""> <i class="fas fa-circle  green"></i> green</label>
+
+                    </p>
+                    <p>
+
+
+                        <button type="button" class="btn" data-price="₦100000" data-name="Hand Made Italian Shoe"
+                            data-img="./currentImages/pngegg (12).png" data-color1="red"
+                            data-fa-icon="fas fa-circle  green"></i>Buy</button>
+                        <button type="button" class="cart">Add to Cart</button>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+    <section class="fifthSection">
+        <div class="title">
+            <h1>Our Main Services</h1>
+        </div>
+        <div class="services">
+            <div class="delivery">
+                <i class="fas fa-hand-holding-hand"></i>
+                <h3>Delivery Policy</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius iure ipsa tempora sunt sapiente odio
+                    exercitation</p>
+            </div>
+            <div class="available">
+                <i class="fas fa-stopwatch"></i>
+                <h3>24/7 support System</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius iure ipsa tempora sunt sapiente odio
+                    exercitation</p>
+            </div>
+            <div class="refund">
+                <i class="fas fa-money-bill-wave"></i>
+                <h3>Refund Policy</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius iure ipsa tempora sunt sapiente odio
+                    exercitation</p>
+            </div>
+        </div>
+    </section>
+    <section class="sectionContactUs">
+        <div class="sectionContact">
+            <div class="sectionContact1">
+                <div>
+                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere velit omnis, harum quibusdam,
+                        iusto
+                        totam autem eum neque</h2>
+                    <p><button type="button">Contact Us</button></p>
+                </div>
+                <div class="socialMain2">
+
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter-square"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+            </div>
+            <div class="sectionContact2">
+
+                <div>
+                    <h2>We are always available </h2>
+                </div>
+                <div>
+                    <i class="fas fa-phone-volume"></i>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="mail">
+        <h1>Join our Mail List</h1>
+        <h2>To get informed about our new arrivals,join our mail list</h2>
+        <div>
+            <form>
+                <input type="text" placeholder="First Name" id="Yourname">
+                <input type="email" placeholder="Email" id="Email">
+                <input type="submit" value="Join" id="join">
+            </form>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="footer1">
+            <div>
+                <h2>Shoe Brand</h2>
+                <p>About the Company,a little Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+                    expedita ratione distinctio</p>
+                <p><button type="button">Read More</button></p>
+            </div>
+            <div>
+                <h2>Quick Links</h2>
+                <p>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Men wears</a></li>
+                    <li><a href="">Women Wears</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Make Request</a></li>
+                </ul>
+                </p>
+            </div>
+            <div>
+                <h2>Follow US</h2>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus velit dolore praesentium,<br>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter-square"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-whatsapp"></i>
+                </P>
+            </div>
+        </div>
+
+        <div class="footer3">
+            <h3>Copyright &copy 2022 shoebrand</h3>
+            <h4>Designed By Victor and Mutiu</h4>
+        </div>
+
+
+
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./app.js"></script>
+
+
+</body>
+
+</html>

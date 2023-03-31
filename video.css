@@ -1,0 +1,259 @@
+/* * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+
+}
+
+#firstSection {
+    display: flex;
+    justify-content: center;
+    /* margin-top: 5rem; 
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.main {
+
+    display: flex;
+    /* justify-content: center; 
+width: 200%;
+height: 35rem;
+/* position: relative; 
+}
+
+.main1 {
+    width: 50%;
+    background: greenyellow;
+
+}
+
+.main1>div {
+    width: 85%;
+
+}
+
+.main1 div:first-child {
+    margin: 2rem auto;
+}
+
+.main1 div:nth-child(2) {
+    margin: 8rem auto;
+}
+
+
+
+
+
+.socialMain {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+
+    margin: auto;
+
+    /* background: red; 
+
+
+}
+
+.socialMain .fab {
+    font-size: 2rem;
+    color: white;
+}
+
+.main1button {
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+
+    width: 85%;
+}
+
+.main1button button {
+    height: 4rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 15px;
+    padding: .5rem 1rem;
+    border: none;
+
+}
+
+.main2 {
+    width: 50%;
+    background: gold;
+}
+
+
+
+.upperSlider {
+    position: relative;
+    width: 200%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+
+}
+
+.upperSlider video {
+    /* position: absolute; 
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+}
+
+
+
+.videoOverlay {
+    position: absolute;
+    width: 50%;
+    height: 87.5%;
+    top: 0;
+    right: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlayButton {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.overlayWords {
+    width: 70%;
+    /* height: 100%; 
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    /* background: red; 
+    position: absolute;
+    right: 0;
+    top: 65%;
+}
+
+#previous {
+    height: 5rem;
+    padding: .7rem .7rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    /* border: 1px solid white; 
+    border: none;
+    color: white;
+}
+
+#previous:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1));
+
+}
+
+#next {
+    height: 5rem;
+    padding: .7rem .7rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    /* border: 1px solid white; 
+    border: none;
+    color: white;
+}
+
+#next:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1));
+
+
+} */
+
+
+
+
+.contain {
+    width: 50%;
+    height: 400px;
+    margin: auto;
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    transition: 3s;
+    /* min-height: fit-content; */
+}
+
+/* .swiper-slide {
+    position: relative;
+
+} */
+
+.swiper-slide video {
+    width: 100%;
+    height: 100%;
+
+}
+
+.swiper-slide .swiper-text {
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: #fff;
+    bottom: 0;
+    top: 0;
+    /* left: 7.5%; */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    width: 100%;
+    height: 100%;
+    /* display: flex; */
+
+}
+
+.swiper-text>div {
+    position: absolute;
+    bottom: 10%;
+    left: 55%;
+    width: 40%;
+
+}
+
+
+
+.swiper-slide .btn {
+    display: inline-block;
+    margin-top: 10px;
+    color: white;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff !important;
+}
+
+.swiper-button-prev {
+    /* left: 7.5%; */
+}
+
+.swiper .swiper-pagination-bullet-active {
+    background: #fff !important;
+}
+
+.swiper-pagination-bullet {
+    background: #fff;
+}
+
+/* .swiper-button-next {
+    /* right: 7.5% !important; 
+} 

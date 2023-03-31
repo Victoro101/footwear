@@ -1,0 +1,736 @@
+MariaDB [workers]>  INSERT INTO employee(email) VALUES("victor111@gamil.com"),("bayo204@gmail.com"),("fade311@gamil.com");
+Query OK, 3 rows affected, 1 warning (0.067 sec)
+Records: 3  Duplicates: 0  Warnings: 1
+
+MariaDB [workers]> SELECT * FROM EMPLOYEE;
++----+--------+-------+------+----------+-------+---------------------+------+---------------------+
+| id | fname  | lname | age  | salary   | level | employed_date       | sex  | email               |
++----+--------+-------+------+----------+-------+---------------------+------+---------------------+
+|  1 | victor | ade   |   35 | 30000.00 |   400 | 2022-08-17 10:03:43 | M    | NULL                |
+|  2 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:04:45 | M    | NULL                |
+|  3 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:09:06 | M    | NULL                |
+|  4 | ade    | taiwo |   15 | 10000.00 |   500 | 2022-08-17 10:09:06 | M    | NULL                |
+|  5 | Rayo   | fade  |   10 | 10000.00 |   200 | 2022-08-17 10:09:06 | F    | NULL                |
+|  6 | boye   | moyo  |    6 |  4000.00 |   700 | 2022-08-17 10:09:06 | M    | NULL                |
+|  7 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:22:15 | NULL | NULL                |
+|  8 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | victor111@gamil.com |
+|  9 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | bayo204@gmail.com   |
+| 10 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | fade311@gamil.com   |
++----+--------+-------+------+----------+-------+---------------------+------+---------------------+
+10 rows in set (0.001 sec)
+
+MariaDB [workers]> UPDATE employee SET fname="salam" WHERE id=7;
+Query OK, 1 row affected (0.073 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [workers]> SELECT * FROM EMPLOYEE;
++----+--------+-------+------+----------+-------+---------------------+------+---------------------+
+| id | fname  | lname | age  | salary   | level | employed_date       | sex  | email               |
++----+--------+-------+------+----------+-------+---------------------+------+---------------------+
+|  1 | victor | ade   |   35 | 30000.00 |   400 | 2022-08-17 10:03:43 | M    | NULL                |
+|  2 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:04:45 | M    | NULL                |
+|  3 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:09:06 | M    | NULL                |
+|  4 | ade    | taiwo |   15 | 10000.00 |   500 | 2022-08-17 10:09:06 | M    | NULL                |
+|  5 | Rayo   | fade  |   10 | 10000.00 |   200 | 2022-08-17 10:09:06 | F    | NULL                |
+|  6 | boye   | moyo  |    6 |  4000.00 |   700 | 2022-08-17 10:09:06 | M    | NULL                |
+|  7 | salam  | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:22:15 | NULL | NULL                |
+|  8 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | victor111@gamil.com |
+|  9 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | bayo204@gmail.com   |
+| 10 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | fade311@gamil.com   |
++----+--------+-------+------+----------+-------+---------------------+------+---------------------+
+10 rows in set (0.000 sec)
+
+MariaDB [workers]> DELETE FROM employee WHERE id=8;
+Query OK, 1 row affected (0.071 sec)
+
+MariaDB [workers]> SELECT * FROM EMPLOYEE;
++----+--------+-------+------+----------+-------+---------------------+------+-------------------+
+| id | fname  | lname | age  | salary   | level | employed_date       | sex  | email             |
++----+--------+-------+------+----------+-------+---------------------+------+-------------------+
+|  1 | victor | ade   |   35 | 30000.00 |   400 | 2022-08-17 10:03:43 | M    | NULL              |
+|  2 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:04:45 | M    | NULL              |
+|  3 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:09:06 | M    | NULL              |
+|  4 | ade    | taiwo |   15 | 10000.00 |   500 | 2022-08-17 10:09:06 | M    | NULL              |
+|  5 | Rayo   | fade  |   10 | 10000.00 |   200 | 2022-08-17 10:09:06 | F    | NULL              |
+|  6 | boye   | moyo  |    6 |  4000.00 |   700 | 2022-08-17 10:09:06 | M    | NULL              |
+|  7 | salam  | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:22:15 | NULL | NULL              |
+|  9 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | bayo204@gmail.com |
+| 10 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | fade311@gamil.com |
++----+--------+-------+------+----------+-------+---------------------+------+-------------------+
+9 rows in set (0.002 sec)
+
+MariaDB [workers]> UPDATE employee SET email="NULL" WHERE id=9;
+Query OK, 1 row affected (0.050 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [workers]> SELECT * FROM EMPLOYEE;
++----+--------+-------+------+----------+-------+---------------------+------+-------------------+
+| id | fname  | lname | age  | salary   | level | employed_date       | sex  | email             |
++----+--------+-------+------+----------+-------+---------------------+------+-------------------+
+|  1 | victor | ade   |   35 | 30000.00 |   400 | 2022-08-17 10:03:43 | M    | NULL              |
+|  2 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:04:45 | M    | NULL              |
+|  3 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:09:06 | M    | NULL              |
+|  4 | ade    | taiwo |   15 | 10000.00 |   500 | 2022-08-17 10:09:06 | M    | NULL              |
+|  5 | Rayo   | fade  |   10 | 10000.00 |   200 | 2022-08-17 10:09:06 | F    | NULL              |
+|  6 | boye   | moyo  |    6 |  4000.00 |   700 | 2022-08-17 10:09:06 | M    | NULL              |
+|  7 | salam  | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:22:15 | NULL | NULL              |
+|  9 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | NULL              |
+| 10 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | fade311@gamil.com |
++----+--------+-------+------+----------+-------+---------------------+------+-------------------+
+9 rows in set (0.000 sec)
+
+MariaDB [workers]> UPDATE employee SET email="NULL" WHERE id=10;
+Query OK, 1 row affected (0.058 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [workers]> SELECT * FROM EMPLOYEE;
++----+--------+-------+------+----------+-------+---------------------+------+-------+
+| id | fname  | lname | age  | salary   | level | employed_date       | sex  | email |
++----+--------+-------+------+----------+-------+---------------------+------+-------+
+|  1 | victor | ade   |   35 | 30000.00 |   400 | 2022-08-17 10:03:43 | M    | NULL  |
+|  2 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:04:45 | M    | NULL  |
+|  3 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:09:06 | M    | NULL  |
+|  4 | ade    | taiwo |   15 | 10000.00 |   500 | 2022-08-17 10:09:06 | M    | NULL  |
+|  5 | Rayo   | fade  |   10 | 10000.00 |   200 | 2022-08-17 10:09:06 | F    | NULL  |
+|  6 | boye   | moyo  |    6 |  4000.00 |   700 | 2022-08-17 10:09:06 | M    | NULL  |
+|  7 | salam  | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:22:15 | NULL | NULL  |
+|  9 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | NULL  |
+| 10 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | NULL  |
++----+--------+-------+------+----------+-------+---------------------+------+-------+
+9 rows in set (0.001 sec)
+
+MariaDB [workers]> SELECT * FROM EMPLOYEE;
++----+--------+-------+------+----------+-------+---------------------+------+-------+
+| id | fname  | lname | age  | salary   | level | employed_date       | sex  | email |
++----+--------+-------+------+----------+-------+---------------------+------+-------+
+|  1 | victor | ade   |   35 | 30000.00 |   400 | 2022-08-17 10:03:43 | M    | NULL  |
+|  2 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:04:45 | M    | NULL  |
+|  3 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:09:06 | M    | NULL  |
+|  4 | ade    | taiwo |   15 | 10000.00 |   500 | 2022-08-17 10:09:06 | M    | NULL  |
+|  5 | Rayo   | fade  |   10 | 10000.00 |   200 | 2022-08-17 10:09:06 | F    | NULL  |
+|  6 | boye   | moyo  |    6 |  4000.00 |   700 | 2022-08-17 10:09:06 | M    | NULL  |
+|  7 | salam  | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:22:15 | NULL | NULL  |
+|  9 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | NULL  |
+| 10 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | NULL  |
++----+--------+-------+------+----------+-------+---------------------+------+-------+
+9 rows in set (0.001 sec)
+
+MariaDB [workers]>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MariaDB [workers]>  INSERT INTO employee(email) VALUES("victor111@gamil.com"),("bayo204@gmail.com"),("fade311@gamil.com");
+Query OK, 3 rows affected, 1 warning (0.067 sec)
+Records: 3  Duplicates: 0  Warnings: 1
+
+MariaDB [workers]> SELECT * FROM EMPLOYEE;
++----+--------+-------+------+----------+-------+---------------------+------+---------------------+
+| id | fname  | lname | age  | salary   | level | employed_date       | sex  | email               |
++----+--------+-------+------+----------+-------+---------------------+------+---------------------+
+|  1 | victor | ade   |   35 | 30000.00 |   400 | 2022-08-17 10:03:43 | M    | NULL                |
+|  2 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:04:45 | M    | NULL                |
+|  3 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:09:06 | M    | NULL                |
+|  4 | ade    | taiwo |   15 | 10000.00 |   500 | 2022-08-17 10:09:06 | M    | NULL                |
+|  5 | Rayo   | fade  |   10 | 10000.00 |   200 | 2022-08-17 10:09:06 | F    | NULL                |
+|  6 | boye   | moyo  |    6 |  4000.00 |   700 | 2022-08-17 10:09:06 | M    | NULL                |
+|  7 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:22:15 | NULL | NULL                |
+|  8 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | victor111@gamil.com |
+|  9 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | bayo204@gmail.com   |
+| 10 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | fade311@gamil.com   |
++----+--------+-------+------+----------+-------+---------------------+------+---------------------+
+10 rows in set (0.001 sec)
+
+MariaDB [workers]> UPDATE employee SET fname="salam" WHERE id=7;
+Query OK, 1 row affected (0.073 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [workers]> SELECT * FROM EMPLOYEE;
++----+--------+-------+------+----------+-------+---------------------+------+---------------------+
+| id | fname  | lname | age  | salary   | level | employed_date       | sex  | email               |
++----+--------+-------+------+----------+-------+---------------------+------+---------------------+
+|  1 | victor | ade   |   35 | 30000.00 |   400 | 2022-08-17 10:03:43 | M    | NULL                |
+|  2 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:04:45 | M    | NULL                |
+|  3 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:09:06 | M    | NULL                |
+|  4 | ade    | taiwo |   15 | 10000.00 |   500 | 2022-08-17 10:09:06 | M    | NULL                |
+|  5 | Rayo   | fade  |   10 | 10000.00 |   200 | 2022-08-17 10:09:06 | F    | NULL                |
+|  6 | boye   | moyo  |    6 |  4000.00 |   700 | 2022-08-17 10:09:06 | M    | NULL                |
+|  7 | salam  | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:22:15 | NULL | NULL                |
+|  8 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | victor111@gamil.com |
+|  9 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | bayo204@gmail.com   |
+| 10 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | fade311@gamil.com   |
++----+--------+-------+------+----------+-------+---------------------+------+---------------------+
+10 rows in set (0.000 sec)
+
+MariaDB [workers]> DELETE FROM employee WHERE id=8;
+Query OK, 1 row affected (0.071 sec)
+
+MariaDB [workers]> SELECT * FROM EMPLOYEE;
++----+--------+-------+------+----------+-------+---------------------+------+-------------------+
+| id | fname  | lname | age  | salary   | level | employed_date       | sex  | email             |
++----+--------+-------+------+----------+-------+---------------------+------+-------------------+
+|  1 | victor | ade   |   35 | 30000.00 |   400 | 2022-08-17 10:03:43 | M    | NULL              |
+|  2 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:04:45 | M    | NULL              |
+|  3 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:09:06 | M    | NULL              |
+|  4 | ade    | taiwo |   15 | 10000.00 |   500 | 2022-08-17 10:09:06 | M    | NULL              |
+|  5 | Rayo   | fade  |   10 | 10000.00 |   200 | 2022-08-17 10:09:06 | F    | NULL              |
+|  6 | boye   | moyo  |    6 |  4000.00 |   700 | 2022-08-17 10:09:06 | M    | NULL              |
+|  7 | salam  | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:22:15 | NULL | NULL              |
+|  9 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | bayo204@gmail.com |
+| 10 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | fade311@gamil.com |
++----+--------+-------+------+----------+-------+---------------------+------+-------------------+
+9 rows in set (0.002 sec)
+
+MariaDB [workers]> UPDATE employee SET email="NULL" WHERE id=9;
+Query OK, 1 row affected (0.050 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [workers]> SELECT * FROM EMPLOYEE;
++----+--------+-------+------+----------+-------+---------------------+------+-------------------+
+| id | fname  | lname | age  | salary   | level | employed_date       | sex  | email             |
++----+--------+-------+------+----------+-------+---------------------+------+-------------------+
+|  1 | victor | ade   |   35 | 30000.00 |   400 | 2022-08-17 10:03:43 | M    | NULL              |
+|  2 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:04:45 | M    | NULL              |
+|  3 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:09:06 | M    | NULL              |
+|  4 | ade    | taiwo |   15 | 10000.00 |   500 | 2022-08-17 10:09:06 | M    | NULL              |
+|  5 | Rayo   | fade  |   10 | 10000.00 |   200 | 2022-08-17 10:09:06 | F    | NULL              |
+|  6 | boye   | moyo  |    6 |  4000.00 |   700 | 2022-08-17 10:09:06 | M    | NULL              |
+|  7 | salam  | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:22:15 | NULL | NULL              |
+|  9 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | NULL              |
+| 10 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | fade311@gamil.com |
++----+--------+-------+------+----------+-------+---------------------+------+-------------------+
+9 rows in set (0.000 sec)
+
+MariaDB [workers]> UPDATE employee SET email="NULL" WHERE id=10;
+Query OK, 1 row affected (0.058 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [workers]> SELECT * FROM EMPLOYEE;
++----+--------+-------+------+----------+-------+---------------------+------+-------+
+| id | fname  | lname | age  | salary   | level | employed_date       | sex  | email |
++----+--------+-------+------+----------+-------+---------------------+------+-------+
+|  1 | victor | ade   |   35 | 30000.00 |   400 | 2022-08-17 10:03:43 | M    | NULL  |
+|  2 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:04:45 | M    | NULL  |
+|  3 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:09:06 | M    | NULL  |
+|  4 | ade    | taiwo |   15 | 10000.00 |   500 | 2022-08-17 10:09:06 | M    | NULL  |
+|  5 | Rayo   | fade  |   10 | 10000.00 |   200 | 2022-08-17 10:09:06 | F    | NULL  |
+|  6 | boye   | moyo  |    6 |  4000.00 |   700 | 2022-08-17 10:09:06 | M    | NULL  |
+|  7 | salam  | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:22:15 | NULL | NULL  |
+|  9 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | NULL  |
+| 10 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | NULL  |
++----+--------+-------+------+----------+-------+---------------------+------+-------+
+9 rows in set (0.001 sec)
+
+MariaDB [workers]> SELECT * FROM EMPLOYEE;
++----+--------+-------+------+----------+-------+---------------------+------+-------+
+| id | fname  | lname | age  | salary   | level | employed_date       | sex  | email |
++----+--------+-------+------+----------+-------+---------------------+------+-------+
+|  1 | victor | ade   |   35 | 30000.00 |   400 | 2022-08-17 10:03:43 | M    | NULL  |
+|  2 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:04:45 | M    | NULL  |
+|  3 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:09:06 | M    | NULL  |
+|  4 | ade    | taiwo |   15 | 10000.00 |   500 | 2022-08-17 10:09:06 | M    | NULL  |
+|  5 | Rayo   | fade  |   10 | 10000.00 |   200 | 2022-08-17 10:09:06 | F    | NULL  |
+|  6 | boye   | moyo  |    6 |  4000.00 |   700 | 2022-08-17 10:09:06 | M    | NULL  |
+|  7 | salam  | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:22:15 | NULL | NULL  |
+|  9 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | NULL  |
+| 10 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | NULL  |
++----+--------+-------+------+----------+-------+---------------------+------+-------+
+9 rows in set (0.001 sec)
+
+MariaDB [workers]>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MariaDB [workers]>  INSERT INTO employee(email) VALUES("victor111@gamil.com"),("bayo204@gmail.com"),("fade311@gamil.com");
+Query OK, 3 rows affected, 1 warning (0.067 sec)
+Records: 3  Duplicates: 0  Warnings: 1
+
+MariaDB [workers]> SELECT * FROM EMPLOYEE;
++----+--------+-------+------+----------+-------+---------------------+------+---------------------+
+| id | fname  | lname | age  | salary   | level | employed_date       | sex  | email               |
++----+--------+-------+------+----------+-------+---------------------+------+---------------------+
+|  1 | victor | ade   |   35 | 30000.00 |   400 | 2022-08-17 10:03:43 | M    | NULL                |
+|  2 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:04:45 | M    | NULL                |
+|  3 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:09:06 | M    | NULL                |
+|  4 | ade    | taiwo |   15 | 10000.00 |   500 | 2022-08-17 10:09:06 | M    | NULL                |
+|  5 | Rayo   | fade  |   10 | 10000.00 |   200 | 2022-08-17 10:09:06 | F    | NULL                |
+|  6 | boye   | moyo  |    6 |  4000.00 |   700 | 2022-08-17 10:09:06 | M    | NULL                |
+|  7 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:22:15 | NULL | NULL                |
+|  8 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | victor111@gamil.com |
+|  9 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | bayo204@gmail.com   |
+| 10 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | fade311@gamil.com   |
++----+--------+-------+------+----------+-------+---------------------+------+---------------------+
+10 rows in set (0.001 sec)
+
+MariaDB [workers]> UPDATE employee SET fname="salam" WHERE id=7;
+Query OK, 1 row affected (0.073 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [workers]> SELECT * FROM EMPLOYEE;
++----+--------+-------+------+----------+-------+---------------------+------+---------------------+
+| id | fname  | lname | age  | salary   | level | employed_date       | sex  | email               |
++----+--------+-------+------+----------+-------+---------------------+------+---------------------+
+|  1 | victor | ade   |   35 | 30000.00 |   400 | 2022-08-17 10:03:43 | M    | NULL                |
+|  2 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:04:45 | M    | NULL                |
+|  3 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:09:06 | M    | NULL                |
+|  4 | ade    | taiwo |   15 | 10000.00 |   500 | 2022-08-17 10:09:06 | M    | NULL                |
+|  5 | Rayo   | fade  |   10 | 10000.00 |   200 | 2022-08-17 10:09:06 | F    | NULL                |
+|  6 | boye   | moyo  |    6 |  4000.00 |   700 | 2022-08-17 10:09:06 | M    | NULL                |
+|  7 | salam  | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:22:15 | NULL | NULL                |
+|  8 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | victor111@gamil.com |
+|  9 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | bayo204@gmail.com   |
+| 10 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | fade311@gamil.com   |
++----+--------+-------+------+----------+-------+---------------------+------+---------------------+
+10 rows in set (0.000 sec)
+
+MariaDB [workers]> DELETE FROM employee WHERE id=8;
+Query OK, 1 row affected (0.071 sec)
+
+MariaDB [workers]> SELECT * FROM EMPLOYEE;
++----+--------+-------+------+----------+-------+---------------------+------+-------------------+
+| id | fname  | lname | age  | salary   | level | employed_date       | sex  | email             |
++----+--------+-------+------+----------+-------+---------------------+------+-------------------+
+|  1 | victor | ade   |   35 | 30000.00 |   400 | 2022-08-17 10:03:43 | M    | NULL              |
+|  2 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:04:45 | M    | NULL              |
+|  3 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:09:06 | M    | NULL              |
+|  4 | ade    | taiwo |   15 | 10000.00 |   500 | 2022-08-17 10:09:06 | M    | NULL              |
+|  5 | Rayo   | fade  |   10 | 10000.00 |   200 | 2022-08-17 10:09:06 | F    | NULL              |
+|  6 | boye   | moyo  |    6 |  4000.00 |   700 | 2022-08-17 10:09:06 | M    | NULL              |
+|  7 | salam  | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:22:15 | NULL | NULL              |
+|  9 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | bayo204@gmail.com |
+| 10 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | fade311@gamil.com |
++----+--------+-------+------+----------+-------+---------------------+------+-------------------+
+9 rows in set (0.002 sec)
+
+MariaDB [workers]> UPDATE employee SET email="NULL" WHERE id=9;
+Query OK, 1 row affected (0.050 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [workers]> SELECT * FROM EMPLOYEE;
++----+--------+-------+------+----------+-------+---------------------+------+-------------------+
+| id | fname  | lname | age  | salary   | level | employed_date       | sex  | email             |
++----+--------+-------+------+----------+-------+---------------------+------+-------------------+
+|  1 | victor | ade   |   35 | 30000.00 |   400 | 2022-08-17 10:03:43 | M    | NULL              |
+|  2 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:04:45 | M    | NULL              |
+|  3 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:09:06 | M    | NULL              |
+|  4 | ade    | taiwo |   15 | 10000.00 |   500 | 2022-08-17 10:09:06 | M    | NULL              |
+|  5 | Rayo   | fade  |   10 | 10000.00 |   200 | 2022-08-17 10:09:06 | F    | NULL              |
+|  6 | boye   | moyo  |    6 |  4000.00 |   700 | 2022-08-17 10:09:06 | M    | NULL              |
+|  7 | salam  | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:22:15 | NULL | NULL              |
+|  9 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | NULL              |
+| 10 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | fade311@gamil.com |
++----+--------+-------+------+----------+-------+---------------------+------+-------------------+
+9 rows in set (0.000 sec)
+
+MariaDB [workers]> UPDATE employee SET email="NULL" WHERE id=10;
+Query OK, 1 row affected (0.058 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [workers]> SELECT * FROM EMPLOYEE;
++----+--------+-------+------+----------+-------+---------------------+------+-------+
+| id | fname  | lname | age  | salary   | level | employed_date       | sex  | email |
++----+--------+-------+------+----------+-------+---------------------+------+-------+
+|  1 | victor | ade   |   35 | 30000.00 |   400 | 2022-08-17 10:03:43 | M    | NULL  |
+|  2 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:04:45 | M    | NULL  |
+|  3 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:09:06 | M    | NULL  |
+|  4 | ade    | taiwo |   15 | 10000.00 |   500 | 2022-08-17 10:09:06 | M    | NULL  |
+|  5 | Rayo   | fade  |   10 | 10000.00 |   200 | 2022-08-17 10:09:06 | F    | NULL  |
+|  6 | boye   | moyo  |    6 |  4000.00 |   700 | 2022-08-17 10:09:06 | M    | NULL  |
+|  7 | salam  | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:22:15 | NULL | NULL  |
+|  9 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | NULL  |
+| 10 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | NULL  |
++----+--------+-------+------+----------+-------+---------------------+------+-------+
+9 rows in set (0.001 sec)
+
+MariaDB [workers]> SELECT * FROM EMPLOYEE;
++----+--------+-------+------+----------+-------+---------------------+------+-------+
+| id | fname  | lname | age  | salary   | level | employed_date       | sex  | email |
++----+--------+-------+------+----------+-------+---------------------+------+-------+
+|  1 | victor | ade   |   35 | 30000.00 |   400 | 2022-08-17 10:03:43 | M    | NULL  |
+|  2 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:04:45 | M    | NULL  |
+|  3 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:09:06 | M    | NULL  |
+|  4 | ade    | taiwo |   15 | 10000.00 |   500 | 2022-08-17 10:09:06 | M    | NULL  |
+|  5 | Rayo   | fade  |   10 | 10000.00 |   200 | 2022-08-17 10:09:06 | F    | NULL  |
+|  6 | boye   | moyo  |    6 |  4000.00 |   700 | 2022-08-17 10:09:06 | M    | NULL  |
+|  7 | salam  | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:22:15 | NULL | NULL  |
+|  9 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | NULL  |
+| 10 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | NULL  |
++----+--------+-------+------+----------+-------+---------------------+------+-------+
+9 rows in set (0.001 sec)
+
+//HISTORY  2
+
+
+
+
+MariaDB [(none)]> USE workers
+Database changed
+MariaDB [workers]> SELECT * FROM medicinestudents;
+Empty set (0.000 sec)
+
+MariaDB [workers]> DESC medicinestudents;
++--------+-------------+------+-----+---------+----------------+
+| Field  | Type        | Null | Key | Default | Extra          |
++--------+-------------+------+-----+---------+----------------+
+| id     | int(11)     | NO   | PRI | NULL    | auto_increment |
+| f_name | varchar(40) | YES  |     | NULL    |                |
+| l_name | varchar(30) | YES  |     | NULL    |                |
+| dept   | varchar(6)  | YES  |     | NULL    |                |
++--------+-------------+------+-----+---------+----------------+
+4 rows in set (0.046 sec)
+
+MariaDB [workers]> INSERT INTO medicinestudents VALUES("john","mike","csc");
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+MariaDB [workers]> INSERT INTO medicinestudents(id,f_name,l_name,dept) VALUES("john","mike","csc");
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+MariaDB [workers]> INSERT INTO medicinestudents(f_name,l_name,dept) VALUES("john","mike","csc"),("merol","scott","cve"),("kenny","vic","MST");
+Query OK, 3 rows affected (0.075 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+MariaDB [workers]> SELECT * FROM MEDICINESTUDENTS;
++----+--------+--------+------+
+| id | f_name | l_name | dept |
++----+--------+--------+------+
+|  1 | john   | mike   | csc  |
+|  2 | merol  | scott  | cve  |
+|  3 | kenny  | vic    | MST  |
++----+--------+--------+------+
+3 rows in set (0.000 sec)
+
+MariaDB [workers]> CREATE TABLE medstudentscore;
+ERROR 1113 (42000): A table must have at least 1 column
+MariaDB [workers]> CREATE TABLE medstudentscore(
+    -> id INT PRIMARY KEY AUTO_INCREMENT,
+    -> std_id INT PRIMARY KEY,
+    -> course VARCHAR(10),
+    -> score INT);
+ERROR 1068 (42000): Multiple primary key defined
+MariaDB [workers]> CREATE TABLE medstudentscore(
+    -> id INT PRIMARY KEY AUTO_INCREMENT,
+    -> std_id INT PRIMARY KEY,
+    -> course VARCHAR(10),
+    -> score INT);
+ERROR 1068 (42000): Multiple primary key defined
+MariaDB [workers]> CREATE TABLE medstudentscore(
+    -> id INT PRIMARY KEY AUTO_INCREMENT,
+    -> std_id INT,
+    -> course VARCHAR(10),
+    -> score INT);
+Query OK, 0 rows affected (0.352 sec)
+
+MariaDB [workers]> INSERT INTO medstudentscore(id,std_id,course,score) VALUES(1,"CSC402",70),(2,"ZLY304",90),(3,"MAT222",40);
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+MariaDB [workers]> INSERT INTO medstudentscore(std_id,course,score) VALUES(1,"CSC402",70),(2,"ZLY304",90),(3,"MAT222",40);
+Query OK, 3 rows affected (0.096 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+MariaDB [workers]> SELECT * FROM medstudentscore;
++----+--------+--------+-------+
+| id | std_id | course | score |
++----+--------+--------+-------+
+|  1 |      1 | CSC402 |    70 |
+|  2 |      2 | ZLY304 |    90 |
+|  3 |      3 | MAT222 |    40 |
++----+--------+--------+-------+
+3 rows in set (0.001 sec)
+
+MariaDB [workers]> SELECT st.*,sc.*,FROM medicinestudents st JOIN medstudentscore sc ON st.id=sc.std_id;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM medicinestudents st JOIN medstudentscore sc ON st.id=sc.std_id' at line 1
+MariaDB [workers]> SELECT st.*,sc.* FROM medicinestudents st JOIN medstudentscore sc ON st.id=sc.std_id;
++----+--------+--------+------+----+--------+--------+-------+
+| id | f_name | l_name | dept | id | std_id | course | score |
++----+--------+--------+------+----+--------+--------+-------+
+|  1 | john   | mike   | csc  |  1 |      1 | CSC402 |    70 |
+|  2 | merol  | scott  | cve  |  2 |      2 | ZLY304 |    90 |
+|  3 | kenny  | vic    | MST  |  3 |      3 | MAT222 |    40 |
++----+--------+--------+------+----+--------+--------+-------+
+3 rows in set (0.045 sec)
+
+MariaDB [workers]> SELECT st.f_name,st.l_name,st.dept,sc.course,sc.score FROM medicinestudents st JOIN medstudentscore sc ON st.id=sc.std_id;
++--------+--------+------+--------+-------+
+| f_name | l_name | dept | course | score |
++--------+--------+------+--------+-------+
+| john   | mike   | csc  | CSC402 |    70 |
+| merol  | scott  | cve  | ZLY304 |    90 |
+| kenny  | vic    | MST  | MAT222 |    40 |
++--------+--------+------+--------+-------+
+3 rows in set (0.001 sec)
+
+MariaDB [workers]> UPDATE medicinestudents SET f_name="adeyemi",l_name="adigun",dept="FBI";
+Query OK, 3 rows affected (0.073 sec)
+Rows matched: 3  Changed: 3  Warnings: 0
+
+MariaDB [workers]> SELECT * FROM medicinestudents;
++----+---------+--------+------+
+| id | f_name  | l_name | dept |
++----+---------+--------+------+
+|  1 | adeyemi | adigun | FBI  |
+|  2 | adeyemi | adigun | FBI  |
+|  3 | adeyemi | adigun | FBI  |
++----+---------+--------+------+
+3 rows in set (0.000 sec)
+
+MariaDB [workers]> UPDATE medicinestudents SET f_name="john",l_name="mike",dept="CSC" WHERE id=1;
+Query OK, 1 row affected (0.135 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [workers]> SELECT * FROM medicinestudents;
++----+---------+--------+------+
+| id | f_name  | l_name | dept |
++----+---------+--------+------+
+|  1 | john    | mike   | CSC  |
+|  2 | adeyemi | adigun | FBI  |
+|  3 | adeyemi | adigun | FBI  |
++----+---------+--------+------+
+3 rows in set (0.001 sec)
+
+MariaDB [workers]> UPDATE medicinestudents SET (f_name="odun",l_name="aye",dept="fff"),(f_name="michael",l_name="scott",dept="CVE") WHERE id IN(2,3);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(f_name="odun",l_name="aye",dept="fff"),(f_name="michael",l_name="scott",dept...' at line 1
+MariaDB [workers]> UPDATE medicinestudents SET f_name="odun",l_name="aye",dept="fff",f_name="michael",l_name="scott",dept="CVE" WHERE id IN(2,3);
+Query OK, 2 rows affected (0.093 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+MariaDB [workers]> SELECT * FROM medicinestudents;
++----+---------+--------+------+
+| id | f_name  | l_name | dept |
++----+---------+--------+------+
+|  1 | john    | mike   | CSC  |
+|  2 | michael | scott  | CVE  |
+|  3 | michael | scott  | CVE  |
++----+---------+--------+------+
+3 rows in set (0.000 sec)
+
+MariaDB [workers]> UPDATE medicinestudents SET f_name="kenny",l_name="vic",dept="ABE" WHERE id=3;
+Query OK, 1 row affected (0.083 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [workers]> SELECT * FROM medicinestudents;
++----+---------+--------+------+
+| id | f_name  | l_name | dept |
++----+---------+--------+------+
+|  1 | john    | mike   | CSC  |
+|  2 | michael | scott  | CVE  |
+|  3 | kenny   | vic    | ABE  |
++----+---------+--------+------+
+3 rows in set (0.001 sec)
+
+MariaDB [workers]>
+MariaDB [workers]> SELECT * FROM employerList;
++--------+------------+-----------+------------+------+--------+----------+
+| emp_id | first_name | last_name | birth_day  | sex  | salary | super_id |
++--------+------------+-----------+------------+------+--------+----------+
+|    100 | David      | Wallace   | 1967-11-17 | M    | 250000 |     NULL |
+|    101 | Jan        | Levison   | 1961-05-11 | F    | 110000 |      100 |
+|    102 | Micheal    | Scott     | 1964-01-15 | M    |  75000 |      100 |
+|    103 | Angela     | Martin    | 1971-06-25 | F    |  63000 |      102 |
+|    104 | Kelly      | Kapoor    | 1980-02-05 | F    |  55000 |      102 |
+|    105 | Stanley    | Hudson    | 1958-02-19 | M    |  69000 |      102 |
+|    106 | Josh       | Portal    | 1969-09-05 | M    |  79000 |      100 |
+|    107 | Andy       | Bernard   | 1973-07-22 | M    |  65000 |      106 |
+|    108 | Jim        | Helpert   | 1978-10-01 | M    |  71000 |      106 |
+|    109 | Oscar      | Martinez  | 1968-02-19 | M    |   6900 |      106 |
+|    110 | Andy       | Claire    | 1999-10-18 | F    |  50000 |      109 |
+|    111 | Oscar      | Fartinez  | 1919-03-07 | F    |  20000 |      111 |
++--------+------------+-----------+------------+------+--------+----------+
+12 rows in set (0.001 sec)
+
+MariaDB [workers]> SELECT * FROM employee;
++----+--------+-------+------+----------+-------+---------------------+------+-------+
+| id | fname  | lname | age  | salary   | level | employed_date       | sex  | email |
++----+--------+-------+------+----------+-------+---------------------+------+-------+
+|  1 | victor | ade   |   35 | 30000.00 |   400 | 2022-08-17 10:03:43 | M    | NULL  |
+|  2 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:04:45 | M    | NULL  |
+|  3 | bayo   | fade  |   15 | 10000.00 |   200 | 2022-08-17 10:09:06 | M    | NULL  |
+|  4 | ade    | taiwo |   15 | 10000.00 |   500 | 2022-08-17 10:09:06 | M    | NULL  |
+|  5 | Rayo   | fade  |   10 | 10000.00 |   200 | 2022-08-17 10:09:06 | F    | NULL  |
+|  6 | boye   | moyo  |    6 |  4000.00 |   700 | 2022-08-17 10:09:06 | M    | NULL  |
+|  7 | salam  | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:22:15 | NULL | NULL  |
+|  9 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | NULL  |
+| 10 |        | NULL  | NULL |     NULL |  NULL | 2022-08-17 10:42:07 | NULL | NULL  |
++----+--------+-------+------+----------+-------+---------------------+------+-------+
+9 rows in set (0.001 sec)
+
+MariaDB [workers]> SELECT i.first_name,i.last_name,s.first_name,s.last_name FROM employerList s JOIN employerList i ON i.super_id=s.emp_id;
++------------+-----------+------------+-----------+
+| first_name | last_name | first_name | last_name |
++------------+-----------+------------+-----------+
+| Jan        | Levison   | David      | Wallace   |
+| Micheal    | Scott     | David      | Wallace   |
+| Angela     | Martin    | Micheal    | Scott     |
+| Kelly      | Kapoor    | Micheal    | Scott     |
+| Stanley    | Hudson    | Micheal    | Scott     |
+| Josh       | Portal    | David      | Wallace   |
+| Andy       | Bernard   | Josh       | Portal    |
+| Jim        | Helpert   | Josh       | Portal    |
+| Oscar      | Martinez  | Josh       | Portal    |
+| Andy       | Claire    | Oscar      | Martinez  |
+| Oscar      | Fartinez  | Oscar      | Fartinez  |
++------------+-----------+------------+-----------+
+11 rows in set (0.632 sec)
+
+MariaDB [workers]> SELECT i.first_name internFirstname,i.last_name internLastname,s.first_name supervisorFirstname,s.last_name supervisorLastname FROM employerList s JOIN employerList i ON i.super_id=s.emp_id;
++-----------------+----------------+---------------------+--------------------+
+| internFirstname | internLastname | supervisorFirstname | supervisorLastname |
++-----------------+----------------+---------------------+--------------------+
+| Jan             | Levison        | David               | Wallace            |
+| Micheal         | Scott          | David               | Wallace            |
+| Angela          | Martin         | Micheal             | Scott              |
+| Kelly           | Kapoor         | Micheal             | Scott              |
+| Stanley         | Hudson         | Micheal             | Scott              |
+| Josh            | Portal         | David               | Wallace            |
+| Andy            | Bernard        | Josh                | Portal             |
+| Jim             | Helpert        | Josh                | Portal             |
+| Oscar           | Martinez       | Josh                | Portal             |
+| Andy            | Claire         | Oscar               | Martinez           |
+| Oscar           | Fartinez       | Oscar               | Fartinez           |
++-----------------+----------------+---------------------+--------------------+
+11 rows in set (0.001 sec)
+
+MariaDB [workers]> SELECT i.*,s.*  FROM employerList s JOIN employerList i ON i.super_id=s.emp_id;
++--------+------------+-----------+------------+------+--------+----------+--------+------------+-----------+------------+------+--------+----------+
+| emp_id | first_name | last_name | birth_day  | sex  | salary | super_id | emp_id | first_name | last_name | birth_day  | sex  | salary | super_id |
++--------+------------+-----------+------------+------+--------+----------+--------+------------+-----------+------------+------+--------+----------+
+|    101 | Jan        | Levison   | 1961-05-11 | F    | 110000 |      100 |    100 | David      | Wallace   | 1967-11-17 | M    | 250000 |     NULL |
+|    102 | Micheal    | Scott     | 1964-01-15 | M    |  75000 |      100 |    100 | David      | Wallace   | 1967-11-17 | M    | 250000 |     NULL |
+|    103 | Angela     | Martin    | 1971-06-25 | F    |  63000 |      102 |    102 | Micheal    | Scott     | 1964-01-15 | M    |  75000 |      100 |
+|    104 | Kelly      | Kapoor    | 1980-02-05 | F    |  55000 |      102 |    102 | Micheal    | Scott     | 1964-01-15 | M    |  75000 |      100 |
+|    105 | Stanley    | Hudson    | 1958-02-19 | M    |  69000 |      102 |    102 | Micheal    | Scott     | 1964-01-15 | M    |  75000 |      100 |
+|    106 | Josh       | Portal    | 1969-09-05 | M    |  79000 |      100 |    100 | David      | Wallace   | 1967-11-17 | M    | 250000 |     NULL |
+|    107 | Andy       | Bernard   | 1973-07-22 | M    |  65000 |      106 |    106 | Josh       | Portal    | 1969-09-05 | M    |  79000 |      100 |
+|    108 | Jim        | Helpert   | 1978-10-01 | M    |  71000 |      106 |    106 | Josh       | Portal    | 1969-09-05 | M    |  79000 |      100 |
+|    109 | Oscar      | Martinez  | 1968-02-19 | M    |   6900 |      106 |    106 | Josh       | Portal    | 1969-09-05 | M    |  79000 |      100 |
+|    110 | Andy       | Claire    | 1999-10-18 | F    |  50000 |      109 |    109 | Oscar      | Martinez  | 1968-02-19 | M    |   6900 |      106 |
+|    111 | Oscar      | Fartinez  | 1919-03-07 | F    |  20000 |      111 |    111 | Oscar      | Fartinez  | 1919-03-07 | F    |  20000 |      111 |
++--------+------------+-----------+------------+------+--------+----------+--------+------------+-----------+------------+------+--------+----------+
+11 rows in set (0.001 sec)
+
+MariaDB [workers]>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
